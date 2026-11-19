@@ -17,18 +17,38 @@ $nama = htmlspecialchars($_SESSION["nama"], ENT_QUOTES, "UTF-8");
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   </head>
   <body class="bg-light">
-    <main class="container py-4">
-      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-        <h1 class="h3 mb-0">Dashboard Sales Tracker</h1>
-        <a class="btn btn-outline-secondary" href="logout.php">Logout</a>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/LOGOPLN.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
+          </a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success btn-light" type="submit">Search</button>
+          </form>
       </div>
-      <div class="card shadow-sm border-0">
-        <div class="card-body">
-          <h2 class="h5">Selamat datang, <?= $nama ?>.</h2>
-          <p class="mb-0">Login berhasil.</p>
-        </div>
+    </nav>
+    <div class="row"> 
+      <div class="col-2"></div>
+      <div class="col-4">
+        <button type="button" class="btn btn-primary btn-lg">Data Karyawan</button>
       </div>
-    </main>
+      <div class="col-4">
+        <button type="button" class="btn btn-primary btn-lg">Kehadiran</button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row"> 
+      <div class="col-2"></div>
+      <div class="col-4">
+        <button type="button" class="btn btn-primary btn-lg">Laporan</button>
+      </div>
+      <div class="col-4">
+        <a class="btn btn-primary btn-lg" href="logout.php" role="button">Keluar</a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
